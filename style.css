@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://images2.alphacoders.com/133/1330484.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container span {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 6px;
+  border-radius: 9px;
+  transform-origin: 129px;
+  transform: scale(3) rotate(calc(var(--i) * (360deg / 50)));
+  animation: animateBlink 6s linear infinite;
+  animation-delay: calc(var(--i) * (6s / 50));
+}
+
+@keyframes animateBlink {
+  0% {
+    background: crimson;
+  }
+  25% {
+    background: #FF9966;
+    filter: blur(3px);
+  }
+}
+
+.wrapper {
+  position: absolute;
+  width: 420px;
+  background: transparent;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  padding: 30px 40px;
+}
+
+.wrapper form {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  color: crimson;
+  text-transform: uppercase;
+}
+
+.input-box {
+  position: relative;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, .3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  border-radius: 30px;
+  font-size: 16px;
+  color: black;
+  padding: 20px 45px 20px 20px;
+  transition: .3s ease;
+  font-weight: bold;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-color: crimson;
+}
+
+.input-box input::placeholder {
+  color: crimson;
+  opacity: 30%;
+  font-weight: bold;
+}
+
+.eye {
+ position: absolute;
+ left: 85%;
+ top: 35%;
+ cursor: pointer;
+ user-select: none;
+}
+
+.forgot-pass {
+  margin: -15px 0 15px;
+  text-align: center;
+}
+
+.forgot-pass a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.forgot-pass a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: crimson;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.register-link {
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link a {
+  font-size: 16px;
+  color: crimson;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  color: black;
+  font-weight: bold;
+}
